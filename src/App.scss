@@ -1,0 +1,222 @@
+@import "./components/scss/var";
+@import "./components/scss/global";
+body {
+  @include font-regular(16px);
+  color: $text;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  width: 200px;
+  line-height: 1;
+  margin-top: 36px;
+}
+h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $text;
+}
+h3 {
+  @include font-bold(15px);
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.arrow {
+  &__left,
+  &__right,
+  &__left-gold,
+  &__right-gold {
+    position: absolute;
+    background-color: #f1f1f3;
+    padding: 5px 10px;
+    cursor: pointer;
+    top: 40px;
+    right: 0;
+    width: 10px;
+    height: 25px;
+    z-index: 10;
+  }
+  &__left,
+  &__left-gold {
+    right: 35px;
+  }
+}
+.title-line {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 4px;
+    bottom: -10px;
+    left: 0;
+    background-color: $red;
+  }
+  &_gold::before {
+    background-color: $gold;
+  }
+  &_green::before {
+    background-color: $green;
+  }
+  &_blue::before {
+    background-color: $blue;
+  }
+  &_black::before {
+    background-color: $black;
+  }
+  &_white::before {
+    background-color: #fff;
+  }
+}
+.card {
+  //flex: 0 1 23%;
+  text-align: center;
+
+  &__photo {
+    width: 269px;
+    height: 358px;
+    overflow: hidden;
+    text-align: center;
+  }
+  &__image {
+    width: 100%;
+    transition: all 0.8s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__title-link {
+    margin: 15px 0 0 0;
+    display: inline-block;
+    color: $text;
+    @include font-bold(15px);
+    transition: all 0.5s;
+    &:hover {
+      color: $red;
+    }
+    &_gold:hover {
+      color: $gold;
+    }
+    &_green:hover {
+      color: $green;
+    }
+    &_blue:hover {
+      color: $blue;
+    }
+    &_black:hover {
+      color: $black;
+    }
+  }
+  &__price {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__price_old {
+    text-decoration: line-through;
+    padding-right: 10px;
+  }
+  &__price_new {
+    color: $red;
+  }
+  &__price_gold {
+    color: $gold;
+  }
+}
+
+.btn__buy,
+.btn__buy_gold {
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 3px;
+  background-color: $red;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  i {
+    padding-right: 5px;
+  }
+  &:hover {
+    color: $red-hover;
+  }
+}
+.btn__buy_gold {
+  background-color: $gold;
+  &:hover {
+    color: #7e542b;
+  }
+}
+.btn__buy_green {
+  background-color: $green;
+  padding: 10px 15px;
+  &:hover {
+    color: #5a7431;
+  }
+}
+.btn__buy_blue {
+  background-color: $blue;
+  padding: 10px 15px;
+  &:hover {
+    color: #5c74d9;
+  }
+}
+.btn__buy_black {
+  background-color: $black;
+  padding: 10px 15px;
+  &:hover {
+    color: #cacaca;
+  }
+}
+
+.card-small {
+  display: flex;
+  justify-content: flex-start;
+  &__photo {
+    width: 180px;
+    height: 100px;
+    padding-right: 15px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    color: #2a313e;
+    font-family: "Karla", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5;
+    transition: all 0.5s;
+    &:hover {
+      color: $red;
+    }
+  }
+  &__price {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &_line {
+    padding: 0 0 30px;
+    border-bottom: 1px solid $bg-grey;
+  }
+}

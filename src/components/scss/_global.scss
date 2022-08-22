@@ -1,0 +1,12 @@
+@mixin font-regular($size) {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: $size;
+  line-height: 1.5;
+}
+@mixin font-bold($size) {
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: $size;
+  line-height: 1.5;
+}
