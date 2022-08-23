@@ -1,0 +1,21 @@
+@import "./../scss/var";
+@import "./../scss/global";
+
+// header
+
+.top {
+  position: relative;
+  color: $white;
+  width: 100%;
+}
+
+.container_logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header__logo {
+  background-color: $bg-dark;
+  height: 110px;
+  margin-top: 50px;
+}

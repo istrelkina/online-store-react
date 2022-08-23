@@ -1,0 +1,51 @@
+@import "./../scss/var";
+@import "./../scss/global";
+
+.hero {
+  background-image: url("./../../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 509px;
+  width: 100%;
+}
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.info {
+  max-width: 550px;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+.year {
+  font-size: 98px;
+  color: #fff;
+  font-weight: 800;
+  padding-right: 20px;
+}
+
+.btn_shop,
+.readmore {
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    transform: translateY(-7px);
+  }
+}
+.btn_shop {
+  border: none;
+  background-color: $red;
+  margin-right: 10px;
+}
+.readmore {
+  border: 1px solid #fff;
+  background-color: transparent;
+}

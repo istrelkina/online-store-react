@@ -1,0 +1,87 @@
+@import "./../../scss/var";
+@import "./../../scss/global";
+
+.container__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.wrapper {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: $bg-dark-top;
+}
+.mail {
+  display: flex;
+  align-items: center;
+}
+.mail_link,
+.login_link,
+.cart_link {
+  //padding-left: 3px;
+  transition: all 0.5s;
+  color: #fff;
+  text-decoration: none;
+  @include font-regular(15px);
+  &:hover {
+    color: $red;
+  }
+  svg {
+    padding-right: 3px;
+  }
+}
+.info {
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.search {
+  display: flex;
+  padding-right: 15px;
+  border-right: 1px solid $hr;
+}
+.input {
+  background-color: $bg-dark;
+  border: none;
+  padding: 8px 12px;
+  width: 180px;
+  color: #fff;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 0;
+  outline: none;
+}
+.search_btn {
+  width: 32px;
+  height: 35px;
+  background-color: $bg-dark;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #fff;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.login {
+  padding: 0 15px;
+}
+.cart {
+  padding: 0 15px;
+  height: 100%;
+  background-color: $red;
+  display: flex;
+  align-items: center;
+  i {
+    padding-right: 3px;
+  }
+  &_link:hover {
+    color: $red-hover;
+  }
+}
